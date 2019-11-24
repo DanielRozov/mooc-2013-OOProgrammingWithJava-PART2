@@ -3,10 +3,10 @@ import java.util.ArrayList;
 
 public class Changer {
 
-    ArrayList<Change> changes = new ArrayList<Change>();
+    ArrayList<Change> changes;
 
     public Changer() {
-        //this.changes = new ArrayList<Change>();
+        this.changes = new ArrayList<Change>();
     }
 
     public void addChange(Change change) {
