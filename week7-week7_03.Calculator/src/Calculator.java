@@ -2,9 +2,11 @@
 public class Calculator {
 
     private Reader reader;
+    private int statistics;
 
     public Calculator() {
-        reader = new Reader();
+        this.reader = new Reader();
+        this.statistics = 0;
     }
 
     public void start() {
@@ -28,16 +30,38 @@ public class Calculator {
         statistics();
     }
 
-    public void sum() {
-
+    private void sum() {
+        int[] values = readTwoValues();
+        System.out.println("sum of the values "
+                + (values[0] + values[1]));
     }
 
-    public void difference() {
+    private void difference() {
+        int[] values = readTwoValues();
+        System.out.println("difference of the values "
+                + (values[0] - values[1]));
     }
 
-    public void product() {
+    private void product() {
+        int[] values = readTwoValues();
+        System.out.println("product of the values "
+                + (values[0] * values[1]));
     }
 
-    public void statistics() {
+    private int[] readTwoValues() {
+        this.statistics++;
+        
+        int[] values = new int[2];
+
+        System.out.println("value1: ");
+        values[0] = reader.readInteger();
+        System.out.println("value2: ");
+        values[1] = reader.readInteger();
+
+        return values;
+    }
+
+    private void statistics() {
+        System.out.println("Calculations done " + this.statistics);
     }
 }
