@@ -105,24 +105,16 @@ deps-jar:
 compile:
 
 -pre-pre-compile-test:
-    [mkdir] Created dir: C:\Users\Daniel\Documents\NetBeansProjects\mooc-2013-OOProgrammingWithJava-PART2\week7-week7_04.ThingSuitcaseAndContainer\build\test\classes
 
 -pre-compile-test:
 
 -compile-test-depend:
 
 -do-compile-test:
-    [javac] Compiling 3 source files to C:\Users\Daniel\Documents\NetBeansProjects\mooc-2013-OOProgrammingWithJava-PART2\week7-week7_04.ThingSuitcaseAndContainer\build\test\classes
-    [javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
-    [javac] Note: Some input files use or override a deprecated API.
-    [javac] Note: Recompile with -Xlint:deprecation for details.
-    [javac] Note: Some input files use unchecked or unsafe operations.
-    [javac] Note: Recompile with -Xlint:unchecked for details.
-    [javac] 1 warning
 
 -post-compile-test:
 
 compile-test:
 
 BUILD SUCCESSFUL
-Total time: 9 seconds
+Total time: 0 seconds
