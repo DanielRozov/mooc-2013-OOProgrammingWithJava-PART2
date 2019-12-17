@@ -33,4 +33,9 @@ public class Container {
                 + this.getSuitcasesTotalWeight() + " kg)";
     }
 
+    public void printThings() {
+        for (Suitcase suitcase : suitcases) {
+            suitcase.printThings();
+        }
+    }
 }

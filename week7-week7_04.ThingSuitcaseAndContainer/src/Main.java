@@ -15,9 +15,9 @@ public class Main {
 //        System.out.println("Mobile: " + mobile);
 //        Exercise 4.2: Class Suitcase
 //        Exercise 4.3: Language Check
-        Thing book = new Thing("Happiness in three steps", 2);
-        Thing mobile = new Thing("Nokia 3210", 1);
-        Thing brick = new Thing("Brick", 4);
+//        Thing book = new Thing("Happiness in three steps", 2);
+//        Thing mobile = new Thing("Nokia 3210", 1);
+//        Thing brick = new Thing("Brick", 4);
 //
 //        Suitcase suitcase = new Suitcase(5);
 //        System.out.println(suitcase);
@@ -49,20 +49,36 @@ public class Main {
 //
 //        Thing heaviest = suitcase.heaviestThing();
 //        System.out.println("The heaviest thing: " + heaviest);
-
-        //Exercise 4.6: Container
-        Suitcase tomsCase = new Suitcase(10);
-        tomsCase.addThing(book);
-        tomsCase.addThing(mobile);
-
-        Suitcase georgesCase = new Suitcase(10);
-        georgesCase.addThing(brick);
-
+//        Exercise 4.6: Container
+//        Suitcase tomsCase = new Suitcase(10);
+//        tomsCase.addThing(book);
+//        tomsCase.addThing(mobile);
+//        Suitcase georgesCase = new Suitcase(10);
+//        georgesCase.addThing(brick);
         Container container = new Container(1000);
-        container.addSuitcase(tomsCase);
-        container.addSuitcase(georgesCase);
+//        container.addSuitcase(tomsCase);
+//        container.addSuitcase(georgesCase);
 
+        //System.out.println(container);
+        //Exercise 4.7: The Container Contents
+        //System.out.println("There are the following things in the "
+        //            + "contaoner suitcases:");
+        //container.printThings();
+        //Exercise 4.8: A Lot of Bricks
+        addSuitcasesFullOfBricks(container);
         System.out.println(container);
+
     }
 
+    public static void addSuitcasesFullOfBricks(Container container) {
+        // adding 100 suitcases with one brick in each
+
+        for (int i = 1; i <= 100; i++) {
+            Thing brick = new Thing("brick", i);
+            Suitcase suitcase = new Suitcase(i + 1);
+
+            suitcase.addThing(brick);
+            container.addSuitcase(suitcase);
+        }
+    }
 }
