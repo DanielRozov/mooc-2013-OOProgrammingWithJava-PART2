@@ -11,9 +11,13 @@ public class Main {
         dictionary.add("banaani", "banana");
         dictionary.add("cembalo", "harpsichord");
 
-        ArrayList<String> translations = dictionary.translationList();
-        for (String translation : translations) {
-            System.out.println(translation);
-        }
+//        ArrayList<String> translations = dictionary.translationList();
+//        for (String translation : translations) {
+//            System.out.println(translation);
+//        }
+        Scanner reader = new Scanner(System.in);
+
+        TextUserInterface ui = new TextUserInterface(reader, dictionary);
+        ui.start();
     }
 }
