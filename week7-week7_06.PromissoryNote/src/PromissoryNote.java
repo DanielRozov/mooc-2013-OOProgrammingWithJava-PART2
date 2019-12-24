@@ -1,9 +1,10 @@
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class PromissoryNote {
 
-    private HashMap<String, Double> promissoryNote;
+    private Map<String, Double> promissoryNote;
 
     public PromissoryNote() {
         this.promissoryNote = new HashMap<String, Double>();
