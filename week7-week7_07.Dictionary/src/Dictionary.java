@@ -30,6 +30,10 @@ public class Dictionary {
         }
     }
 
+    public int amountOfWords() {
+        return this.dictionary.size();
+    }
+
     private String stringCleaner(String string) {
 
         if (string == null) {
