@@ -1,4 +1,6 @@
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -32,6 +34,17 @@ public class Dictionary {
 
     public int amountOfWords() {
         return this.dictionary.size();
+    }
+
+    public ArrayList<String> translationList() {
+        ArrayList<String> translationList = new ArrayList<String>();
+
+        for (String word : this.dictionary.keySet()) {
+            String translation = this.dictionary.get(word);
+            translationList.add(word + " = " + translation);
+        }
+
+        return translationList;
     }
 
     private String stringCleaner(String string) {
