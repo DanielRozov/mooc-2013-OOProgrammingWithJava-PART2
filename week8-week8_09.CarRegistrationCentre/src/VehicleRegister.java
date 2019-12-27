@@ -14,35 +14,31 @@ public class VehicleRegister {
     }
 
     public boolean add(RegistrationPlate plate, String owner) {
-
-        if (this.owners.get(plate) == null) {
-            this.owners.put(plate, owner);
-            return true;
+        if (this.owners.containsKey(plate)) {
+            return false;
         }
-        return false;
+
+        this.owners.put(plate, owner);
+        return true;
     }
 
     public String get(RegistrationPlate plate) {
-        if (this.owners.containsKey(plate)) {
-            return this.owners.get(plate);
-        } else {
-            return null;
-        }
+        return this.owners.get(plate);
     }
 
     public boolean delete(RegistrationPlate plate) {
-        if (this.owners.containsKey(plate)) {
-            this.owners.remove(plate);
-            return true;
+        if (!this.owners.containsKey(plate)) {
+            return false;
         }
 
-        return false;
+        this.owners.remove(plate);
+        return true;
     }
 
     public void printRegistrationPlates() {
 
-        for (Map.Entry<RegistrationPlate, String> entry : this.owners.entrySet()) {
-            System.out.println(entry.getKey());
+        for (RegistrationPlate plate : this.owners.keySet()) {
+            System.out.println(plate);
         }
     }
 
