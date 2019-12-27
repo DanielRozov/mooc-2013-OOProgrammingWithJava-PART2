@@ -12,23 +12,10 @@ public class Box implements ToBeStored {
     }
 
     public void add(ToBeStored thing) {
-        boolean isMaxWeight = isMaxWeight(this.things, thing);
 
-        if (isMaxWeight) {
+        if ((this.weight() + thing.weight()) <= this.maxWeight) {
             this.things.add(thing);
         }
-    }
-
-    // helper method 
-    private boolean isMaxWeight(ArrayList<ToBeStored> things,
-            ToBeStored thing) {
-        double totalWeight = weight() + thing.weight();
-
-        if (totalWeight <= this.maxWeight) {
-            return true;
-        }
-
-        return false;
     }
 
     public double weight() {
@@ -44,7 +31,7 @@ public class Box implements ToBeStored {
     @Override
     public String toString() {
         return "Box: " + this.things.size() + " things, total weight "
-                + weight() + " kg";
+                + this.weight() + " kg";
     }
 
 }
