@@ -11,25 +11,24 @@ public class AirportPanel {
         this.flightService = flightService;
     }
 
-    public void addPlaneAndFlight() {
-        System.out.println("Airport panel \n");
+    public void start() {
+        System.out.println("Airport panel");
+        System.out.println("-------------------- \n");
 
         while (true) {
-            System.out.println("-------------------- \n"
-                    + "\n" + "Choose operation: \n"
+            System.out.println("Choose operation: \n"
                     + "[1] Add airplane \n"
                     + "[2] Add flight \n"
                     + "[x] Exit");
 
             String operation = this.reader.nextLine();
 
-            if (operation.equals("x")) {
+            if (operation.toLowerCase().equals("x")) {
                 flightService();
                 break;
             }
 
             operationHandlingforPlaneAndFlights(operation);
-            System.out.println("");
         }
     }
 
@@ -74,12 +73,11 @@ public class AirportPanel {
 
             String operation = this.reader.nextLine();
 
-            if (operation.equals("x")) {
+            if (operation.toLowerCase().equals("x")) {
                 break;
             }
 
             operationHandlingForFlightService(operation);
-            System.out.println("");
         }
 
     }
@@ -92,7 +90,7 @@ public class AirportPanel {
         } else if (operation.equals("3")) {
             System.out.println("Give plane ID");
             String planeID = this.reader.nextLine();
-            this.flightService.printPlane(planeID);
+            System.out.println(this.flightService.printPlane(planeID));
         }
     }
 }
