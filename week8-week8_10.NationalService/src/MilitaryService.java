@@ -1,22 +1,22 @@
 
-public class CivilService implements NationalService {
+public class MilitaryService implements NationalService {
 
     private int daysLeft;
 
-    public CivilService() {
-        this.daysLeft = 362;
+    public MilitaryService(int daysLeft) {
+        this.daysLeft = daysLeft;
     }
 
     @Override
     public int getDaysLeft() {
-        int day = this.daysLeft;
         return this.daysLeft;
     }
 
     @Override
     public void work() {
-        if ((this.daysLeft) > 0) {
+        if (this.daysLeft > 0) {
             this.daysLeft--;
         }
     }
+
 }
