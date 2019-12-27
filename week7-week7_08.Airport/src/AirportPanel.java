@@ -77,7 +77,7 @@ public class AirportPanel {
             if (operation.equals("x")) {
                 break;
             }
-            
+
             operationHandlingForFlightService(operation);
             System.out.println("");
         }
@@ -85,6 +85,14 @@ public class AirportPanel {
     }
 
     private void operationHandlingForFlightService(String operation) {
-
+        if (operation.equals("1")) {
+            this.flightService.printPlanes();
+        } else if (operation.equals("2")) {
+            this.flightService.printFlights();
+        } else if (operation.equals("3")) {
+            System.out.println("Give plane ID");
+            String planeID = this.reader.nextLine();
+            this.flightService.printPlane(planeID);
+        }
     }
 }

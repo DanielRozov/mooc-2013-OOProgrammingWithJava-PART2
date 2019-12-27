@@ -37,7 +37,7 @@ public class FlightService {
 
         if (ID != null && departure != null && destination != null) {
             if (this.planes.containsKey(ID)) {
-                flightPlans.add(printPlaneInfo(ID) + "( " + departure + " - "
+                flightPlans.add(printPlane(ID) + "( " + departure + " - "
                         + destination + " )");
             }
         }
@@ -51,21 +51,13 @@ public class FlightService {
         }
     }
 
-    public String printFlight(String string) {
-        String flight = "";
-        String ID = stringCleaner(string);
-
-        if (ID != null) {
-            for (String s : flightPlans) {
-                if (s.contains(ID)) {
-                    flight = s.toString();
-                }
-            }
+    public void printFlights() {
+        for (String s : this.flightPlans) {
+            System.out.println(s);
         }
-        return flight;
     }
 
-    public String printPlaneInfo(String string) {
+    public String printPlane(String string) {
         String ID = stringCleaner(string);
 
         if (this.planes.containsKey(ID)) {
