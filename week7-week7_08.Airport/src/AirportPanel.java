@@ -1,12 +1,12 @@
 
 import java.util.Scanner;
 
-public class AirPortPanel {
+public class AirportPanel {
 
     private Scanner reader;
     private FlightService flightService;
 
-    public AirPortPanel(Scanner reader, FlightService flightService) {
+    public AirportPanel(Scanner reader, FlightService flightService) {
         this.reader = reader;
         this.flightService = flightService;
     }
@@ -77,11 +77,14 @@ public class AirPortPanel {
             if (operation.equals("x")) {
                 break;
             }
+            
+            operationHandlingForFlightService(operation);
+            System.out.println("");
         }
 
     }
 
-    private void operationHandlingForFlightService() {
+    private void operationHandlingForFlightService(String operation) {
 
     }
 }

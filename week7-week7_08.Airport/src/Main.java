@@ -7,7 +7,7 @@ public class Main {
         // Write your main program here. Implementing your own classes will be useful.
         FlightService fs = new FlightService();
         Scanner reader = new Scanner(System.in);
-        AirPortPanel panel = new AirPortPanel(reader, fs);
+        AirportPanel panel = new AirportPanel(reader, fs);
         
         panel.addPlaneAndFlight();
     }
