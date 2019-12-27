@@ -44,7 +44,9 @@ public class RegistrationPlate {
         if (getClass() != obj.getClass()) {
             return false;
         }
+
         final RegistrationPlate other = (RegistrationPlate) obj;
+
         if ((this.regCode == null) ? (other.regCode != null) : !this.regCode.equals(other.regCode)) {
             return false;
         }
