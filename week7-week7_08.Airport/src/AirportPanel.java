@@ -88,7 +88,7 @@ public class AirportPanel {
         } else if (operation.equals("2")) {
             this.flightService.printFlights();
         } else if (operation.equals("3")) {
-            System.out.println("Give plane ID");
+            System.out.println("Give plane ID:");
             String planeID = this.reader.nextLine();
             System.out.println(this.flightService.printPlane(planeID));
         }

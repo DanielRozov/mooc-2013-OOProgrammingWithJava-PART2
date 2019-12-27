@@ -37,7 +37,7 @@ public class FlightService {
 
         if (ID != null && departure != null && destination != null) {
             if (this.planes.containsKey(ID)) {
-                flightPlans.add(printPlane(ID) + "(" + departure + " - "
+                flightPlans.add(printPlane(ID) + " (" + departure + "-"
                         + destination + ")");
             }
         }
