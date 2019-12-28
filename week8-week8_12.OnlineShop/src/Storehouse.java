@@ -1,6 +1,7 @@
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
 public class Storehouse {
 
@@ -42,5 +43,11 @@ public class Storehouse {
         }
 
         return false;
+    }
+
+    public Set<String> products() {
+//        Set<String> products = this.products.keySet();
+//        return products;
+        return this.products.keySet();
     }
 }
