@@ -46,8 +46,6 @@ public class Storehouse {
     }
 
     public Set<String> products() {
-//        Set<String> products = this.products.keySet();
-//        return products;
         return this.products.keySet();
     }
 }
