@@ -22,6 +22,7 @@ public class Storehouse {
         if (!this.products.containsKey(product)) {
             return -99;
         }
+        
         return this.products.get(product);
     }
 
@@ -29,13 +30,16 @@ public class Storehouse {
         if (!this.stocks.containsKey(product)) {
             return 0;
         }
+        
         return this.stocks.get(product);
     }
 
     public boolean take(String product) {
         int stock = 0;
+        
         if (!this.products.containsKey(product)) {
             return false;
+            
         } else if (this.stocks.get(product) > 0) {
             stock = this.stocks.get(product) - 1;
             this.stocks.replace(product, stock);
