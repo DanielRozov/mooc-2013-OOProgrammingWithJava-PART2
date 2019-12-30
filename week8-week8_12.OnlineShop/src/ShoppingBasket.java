@@ -16,7 +16,6 @@ public class ShoppingBasket {
         if (this.basket.containsKey(product)) {
             this.basket.get(product).increaseAmount();
         } else {
-
             this.basket.put(product, new Purchase(product, 1, price));
         }
     }
@@ -33,7 +32,7 @@ public class ShoppingBasket {
 
     public void print() {
         for (Purchase item : this.basket.values()) {
-            System.out.println(item.toString());
+            System.out.println(item);
         }
     }
 }
