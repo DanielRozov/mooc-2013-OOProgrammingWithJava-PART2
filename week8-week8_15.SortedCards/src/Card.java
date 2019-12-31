@@ -38,11 +38,11 @@ public class Card implements Comparable<Card> {
     }
 
     @Override
-    public int compareTo(Card o) {
-        if (this.value - o.value == 0) {
-            return this.suit - o.suit;
-        } else {
-            return this.value - o.value;
+    public int compareTo(Card card) {
+        if (this.value == card.value) {
+            return this.suit - card.suit;
         }
+
+        return this.value - card.value;
     }
 }
