@@ -1,22 +1,42 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-public class Hand {
+public class Hand implements Comparable<Hand> {
 
-    private List<Card> cards;
+    private List<Card> cardsInHand;
 
     public Hand() {
-        this.cards = new ArrayList<Card>();
+        this.cardsInHand = new ArrayList<Card>();
     }
 
     public void add(Card card) {
-        this.cards.add(card);
+        this.cardsInHand.add(card);
+    }
+
+    public void sort() {
+        Collections.sort(this.cardsInHand);
     }
 
     public void print() {
-        for (Card card : cards) {
+        for (Card card : this.cardsInHand) {
             System.out.println(card.toString());
         }
+    }
+
+    private int sum() {
+        int sum = 0;
+
+        for (Card card : this.cardsInHand) {
+            sum += card.getValue();
+        }
+
+        return sum;
+    }
+
+    @Override
+    public int compareTo(Hand hand) {
+        return this.sum() - hand.sum();
     }
 }
