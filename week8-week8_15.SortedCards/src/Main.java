@@ -3,12 +3,13 @@ public class Main {
 
     public static void main(String[] args) {
         // write some test code here
-        Card first = new Card(2, Card.DIAMONDS);
-        Card second = new Card(14, Card.CLUBS);
-        Card third = new Card(12, Card.HEARTS);
+        Hand hand = new Hand();
 
-        System.out.println(first);
-        System.out.println(second);
-        System.out.println(third);
+        hand.add(new Card(2, Card.SPADES));
+        hand.add(new Card(14, Card.CLUBS));
+        hand.add(new Card(12, Card.HEARTS));
+        hand.add(new Card(2, Card.CLUBS));
+
+        hand.print();
     }
 }
